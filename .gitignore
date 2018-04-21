@@ -1,0 +1,10 @@
+#exclude generated files
+*.pdf
+*.aux
+*.log
+*.tex.backup
+*.iml
+*.fdb_latexmk
+*.fls
+#Exclude idea folder
+.idea
