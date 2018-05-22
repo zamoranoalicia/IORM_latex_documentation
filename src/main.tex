@@ -1,0 +1,62 @@
+%%
+%% Author: Alicia Zamorano
+%% 21-04-18
+%%
+
+% Preamble
+\documentclass[11pt]{book}
+\usepackage{import}
+\usepackage{iorm_template}
+
+\usepackage{makeidx}
+\makeindex
+
+
+\begin{document}
+    \frontmatter
+
+    \def\contentsname{ÍNDICE}
+    \def\listfigurename{ÍNDICE DE FIGURAS}
+    \def\listtablename{TABLAS}
+    \def\chaptername{Capítulo}
+
+    \import{./}{dedication.tex}
+
+    \import{./}{acknowledgment.tex}
+
+    \clearpage
+
+    \thispagestyle{empty}
+
+    \tableofcontents
+
+    \clearpage
+
+    \thispagestyle{empty}
+
+    \listoffigures
+
+    \clearpage
+
+    \thispagestyle{empty}
+
+    \listoftables
+
+    \mainmatter
+
+    \include{sections/chapter_1/1_introduction}
+
+    \include{sections/chapter_2/2_theoretical_framework}
+
+    \include{sections/chapter_3/3_application_area}
+
+    \include{sections/chapter_4/4_methodology_and_development}
+
+    \import{sections/chapter_5/}{5_concluding_remarks.tex}
+
+    \backmatter
+
+    \import{./}{references_and_bibliography.tex}
+    \import{./}{appendixes.tex}
+
+\end{document}

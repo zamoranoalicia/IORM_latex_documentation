@@ -6,5 +6,9 @@
 *.iml
 *.fdb_latexmk
 *.fls
+*.idx
+*.lof
+*.lot
+*.toc
 #Exclude idea folder
 .idea
