@@ -4,5 +4,72 @@
 %%
 
 % Preamble
-\chapter{Capítulo 2}
+\chapter{Marco teórico}
+\noindent Este capítulo provee las pautas más importantes y toda la información requerida para
+\noindent comprender esta memoria. Si el lector posee conocimientos previos acerca de Idioms en ER,
+\noindent el Modelo Relacional y el Paradigma Orientado a Objetos puede omitir libremente este
+\noindent capítulo. \\
+\indent  La sección 2.1 de este capítulo explica brevemente que son los Idioms en ER y que
+\noident proveen estos a los diseñadores de bases de datos. La sección 2.2 otorga una explicación
+\noident rápida del Modelo Relacional y sus características relevantes. Por último la sección 2.3
+\noident da a conocer de forma concisa los principales atributos del Paradigma Orientado a Objetos (POO).
+\section {Idioms en ER}
+\noident Las primeras etapas de la construcción de un sistema de información, más propiamente
+\noident la etapa de análisis, usualmente requiere la definición de un modelo de persistencia.
+\noident Para esta definición se emplean estructuras preconcebidas, con la ventaja de que estas estructuras
+\noident son formaciones sintácticas con semántica correcta, esto permite el reuso de estas estructuras, posibilitando
+\noident la formalización de un modelo de alto nivel. \\
+\indent  Los Idioms en ER son construcciones semánticas basadas en un conjunto de estructuras sintácticas formalmente
+\noident definidas en lenguaje ER las cuales al componerse forman estructuras mucho más complejas.\\
+\noident Dado que estas son construcciones semánticas estas no pueden ser descompuestas en símbolos sintácticos,
+\noident de igual forma al ser construcciones semánticas estas no pueden ser definidas como soluciones completas,
+\noident por tanto, no deben considerarse como patrones de diseño.\\
+\noident Es importante denotar que los Idioms poseen atributos tales como:
 
+\begin{itemize}
+    \item Ser un conjunto finito de transformaciones. Se tienen siete transformaciones definidas, las cuales serán revisadas en la siguiente sección.
+    \item La semántica de un Idiom no altera la semántica original de sus componentes, es decir se preserva su correctitud.
+    \item Toda construcción efectuada con Idioms contiene cualidades deseables como correctitud en la navegabilidad y normalización.
+\end{itemize} \\
+\noident De esta manera estas construcciones añaden propiedades deseables, las cuales las convierten en un recurso eficiente al
+\noident momento de abstraer un modelo de datos (Flores, 2006).
+\subsection{Clasificación de los Idioms}
+\begin{enumerate}
+    \item \textit {Clasificación o Catálogo:} La entidad-tipo B clasifica los posibles valores
+    que puede tener la entidad-tipo A en los valores de su atributo
+    B. En otras palabras, la entidad-tipo B se constituye en un
+    catálogo de recursos de entidades que tipifica.
+    \item \textit {Composición:} Una entidad B, es el resultado de la composición
+    de dos entidades C y A, cuyo dinamismo es el que permite la
+    creación de entidades B. En otras palabras se usa este idiom,
+    cuando se quiere registrar la historia de las acciones de C y A.
+    \item \textit {Reflexión simple:} Entidades de tipo A, se relaciones con sus
+    semejantes también de tipo A.
+    \item \textit {Reflexión compuesta:} Entidades de tipo E, se relacionan con
+    entidades de tipo E con relaciones de la forma.
+    \item \textit {Is a:} Una entidad de tipo H es una (is a) entidad
+    de tipo I.
+    \item \textit {Maestro - detalle:} Una entidad M es detallada por N entidades.
+    \item \textit {Básico:} Idiom Básico o Unidad de construcción.
+\end{enumerate}
+\section {Modelo Relacional}
+\noindent El modelo relacional es el resultado del trabajo gestado por Edgar Codd en la década de 1960,
+\noindent el cual cimentó su investigación en la \textit {teoría matemática de conjuntos y la lógica de predicados}, enfocado en una construcción
+\noindent conocida como relación, logró desarrollar el Modelo Relacional que posteriormente fué introducido en un artículo
+\noindent de investigación de IBM el año 1970 (Harrington, 2009).\\
+\noindent Este modelo describe los datos en términos de \textit{relaciones, atributos y tuplas}
+%\noindent estos son referidos en el modelo conceptual como \textit{entidades de clase, atributos y cantidad de ocurrencias};
+\noindent en el modelo relacional estos son implementados como tablas, columnas y filas respectivamente(Hay, 2006).\\
+\noindent De la misma manera sostiene que existen tres componentes importantísimos en el modelo \textit {estructura, integridad y manipulación}.
+\subsection {Estructura}
+\noindent El elemento estructural fundamental es, por supuesto, la relación, una relación esta definida sobre un tipo
+\noindent (referido asimismo como dominio), el cual es básicamente una abstracción de cualidades similares denominadas atributos,
+\noindent los cuales poseen propiedades definidas como:
+\begin{itemize}
+    \item Unicidad en los nombres de tipos
+    \item Homogeneidad en lo valores, es decir los valores de un tipo están obligados a pertenecer a un mismo dominio.
+    \item No existencia el concepto de posición, esto resulta en diferentes disposiciones sin ningún impacto en los datos
+\end{itemize}
+\noindent Una base de datos \textit {relacional} es aquella cuya estructura lógica esta
+\noindent compuesta de ``relaciones".
+\section {Paradigma Orientado a Objetos}

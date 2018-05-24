@@ -5,3 +5,101 @@
 
 % Preamble
 \chapter{Introducción}
+\noindent Las bases de datos son un aspecto fundamental en el diseño de sistemas, los modelos orientados a objetos,
+\noindent se fundan en pensar a cerca de los problemas a resolver empleando modelos que se han organizado tomando como base conceptos del mundo real,
+\noindent la transformación del primero al segundo da como resultado una base de datos orientada a objetos virtual, sobre la base de datos relacional , sin embargo esta transformación lleva consigo una perdida importante del contenido semántico de los modelos.
+\section{Antecedentes}
+\noindent El mapeo objeto relacional es una técnica de programación para convertir datos entre sistemas de tipos, utilizando un lenguaje de programación orientado a objetos y base de datos relacional con la ayuda de un motor de persistencia de objetos [Flores, 2006].
+\noindent Existen muchos sistemas que realizan esta transformación como \textbf{Hibernate} utilizado en la programación orientada a objetos en java, \textbf{Doctrine} y \textbf{Propel} que son destacados en el medio,
+\noindent los citados anteriormente no toman en cuenta los idioms para su transformación [Fowler, 2010]\\
+\section{Definición del Problema}
+\noindent La transformación de un modelo relacional a un modelo orientado a objetos proporciona una transformación de una
+\noindent base de datos orientada a objetos virtual[Fowler, 2010] \\
+\noindent En la programación orientada a objetos, las tareas de gestión de datos son implementadas generalmente por la
+\noindent manipulación de objetos, los cuales son casi siempre valores no escalares.
+\noindent Muchos productos populares de base de datos, tales como los Sistemas de Gestión de Bases de datos SQL, solamente
+\noindent pueden almacenar y manipular valores escalares como integers y strings, organizados en tablas normalizadas.
+\noindent Incongruencia entre el modelo relacional y el modelo orientado a objetos. El núcleo del problema reside en traducir
+\noindent estos objetos a formas que pueden ser almacenadas en la base de datos para recuperarlas fácilmente, mientras se
+\noindent preservan las propiedades de los objetos y sus relaciones[Fowler, 2010]
+\noindent Considerando de  suma importancia la calidad de la semántica en las transformaciones se propone el siguiente problema:
+\noindent \texbf\textit{Escaso contenido semántico en las transformaciones de datos entre el sistema de tipos utilizado
+\noindent en un lenguaje de programación orientado a objetos, provoca bajo rendimiento en el desarrollo de un sistema.}
+
+\section {Objetivos}
+\subsection{Objetivo General}
+\noindent Definir un modelo para el estudio e implementación de las transformaciones objeto-relacionales,
+\noindent proporcionando una transformación de alto nivel, para incrementar el rendimiento en el diseño de persistencia.
+\subsection{Objetivos Específicos}
+\begin{itemize}
+    \item Definir las transformaciones a tráves de E-R Idioms.
+    \item Definir funciones genéricas que se puedan aplicar en E-R Idioms.
+    \item Crear una arquitectura de transformación modelo-objeto ER-Idiom.
+    \item Implementar un prototipo de la transformación para la estructura y para comportamiento
+\end{itemize}
+\section{Ingeniería del proyecto}
+\begin{longtable}{|p{2.8cm}| p{2.8cm}| p{2.8cm}| p{2.8cm}| p{2.8cm}|}
+    \hline
+    Objetivo General & Causas & Objetivos Especifícos & Actividades & Resultado \\ \hline
+    \noindent \multirow{Estudio e implementación de transformaciones objeto relacionales, proponiendo una transformación
+    \noindent de alto nivel, para incrementar el rendimiento en el deseño de persistencia.}
+    \noindent & {Duplicidad de datos despúes de el mapeo objeto relacional.} & Definir las transformaciones a tráves de E-R Idioms. &
+    \parbox
+    \begin{itemize}
+        \item Realizar un módulo que permita eliminar las tablas duplicadas.
+        \item Modelar la BD para los objetos.
+    \end{itemize}
+    \noindent & Tablas sin datos duplicados después de una transformación objeto relacional.\\ \hline
+    \noindent & Inexistencia de funciones genericas aplicables e ER-Idioms} & Definir funciones genericas que se puedan aplicar a ER-Idioms.
+    &
+    \parbox {2.8cm}{
+    \begin{itemize}
+        \item Identificar los idioms que tengan características similares a modelos orientados a objetos.
+        \item Realizar un modulo que permita la transformación de un objeto.
+    \end{itemize}}
+    & Mayor cantidad de herramientas con las que se pueda aplicar los idioms.\\ \hline
+    &
+    {Perdida de contenido semántico después de una transformación objeto relacional.}
+    &
+    Crear una arquitectura de transformación modelo objeto ER-Idiom. &
+    \parbox{2.8cm} {
+    \begin{itemize}
+        \item Realizar la BD para las transformaciones.
+        \item Identificar los idioms que tengan caracteristicas similares a los objetos.
+    \end{itemize}}
+    &
+    Transformaciones de objetos con mayor contenido semántico. \\ \hline
+    &
+    {Falta de persistencia de los objetos después de una transformación al modelo relacional.} &
+    Implementar el prototipo de la transformación para la estructura y para el comportamiento.
+    &
+    \parbox{2.8cm}{
+    \begin{itemize}
+        \item Realizar la BD para las transformaciones.
+        \item Identificar los idioms que tengan caracteristicas similares a los objetos.
+        \item Definir los idioms en términos de estructuras y en términos de funciones.
+    \end{itemize}}
+    &
+    Objetos persistentes después de la transformación al modelo relacional.\\ \hline
+\end{longtable}
+\section {Innovación Tecnológica}
+\noindent Esta investigación tendrá un aporte importante debido a que no existen documentos similares y además es un aporte
+\noindent significativo al trabajo llevado a cabo con respecto a los idioms en BD.
+\section {Justificación}
+\noindent Permitir otros trabajos de investigación, afianzando el concepto de idioms, para así poder establecer una base
+\noindent solida a la investigación[Flores, 2006]
+\noindent No existen librerías conocidas documentos similares para la aplicación de Idioms.
+\noindent A pesar de la existencia de métodods de diseño maduros, patrones de diseño y otras herramientas, estos no reflejan una solución especializada para el manejo de la persistencia y más aún ellos no son una referencia para el diseño ER y relacional[1].
+\noindent Este proyecto beneficiará a los desarrolladores, comunidad cientifíca, investigadores de el área de informatica,
+\noindent brindando solidez a un concepto que se está manejando.
+\section {Alcances del Proyecto.}
+\begin{itemize}
+    \item El prototipo podrá demostrar la transformación de un Idiom a un modelo orientado a objetos.
+    \item El prototipo solo realizará la aplicación para un grupo de idioms determinados.
+    \item El proyecto permitirá la definición de Idioms en términos de estructura en terminos de sus definiciones.
+    \item El proyecto aplicará sus estructuras sobre datos genéricos.
+\end{itemize}
+\section{Limites del Proyecto}
+\begin{itemize}
+    \item Los prototipos son para fines demostrativos.
+\end{itemize}
