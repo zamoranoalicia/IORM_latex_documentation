@@ -70,6 +70,57 @@
     \item Homogeneidad en lo valores, es decir los valores de un tipo están obligados a pertenecer a un mismo dominio.
     \item No existencia el concepto de posición, esto resulta en diferentes disposiciones sin ningún impacto en los datos
 \end{itemize}
-\noindent Una base de datos \textit {relacional} es aquella cuya estructura lógica esta
-\noindent compuesta de ``relaciones".
+\subsection{Integridad de Datos}
+\noindent La integridad de datos es la certeza de correctitud y consistencia de los datos.\\
+\noindent Dos restricciones de integridad \textit(integrity constrainsts) se hallan originalmente definidas en el modelo relacional
+\noindent formulado por Codd, dichas restricciones incluyen:
+\begin{itemize}
+    \item \textit {Integridad en las Relaciones:}
+    \item \textit {Integridad Referencial:}
+\end{itemize}
+\subsection {Manipulación}
 \section {Paradigma Orientado a Objetos}
+\subsection {Patrones de Diseño}
+\noindent El diseño orientado a objetos, es considerado una tarea sustancial al momento de emprender un proyecto de software,
+\noindent más aún si se desea elaborar un diseño de alta calidad que incluya \textit{reusabilidad y flexibilidad}, para ello es necesario
+\noindent definir los objetos que serán representados en clases, de la misma manera es deseable alcanzar la \textit{granularidad}
+\noindent adecuada al momento de crear jerarquías de clase, interfaces, clases abstractas y establecer apropiadamente las relaciones
+\noindent que existen entre ellas.\\
+\subsubsection {¿Como se describe un patrón de diseño?}
+\noindent La forma más acertada para describir un patrón de diseño es a través de \textit {notaciones gráficas},
+\noindent no obstante estás no proporcionan una solución integra para un problema dado, es imprescindible, además de
+\noindent el registro de las clases y sus relaciones, el registro de los parámetros sobre los cuales se tomo la decisión
+\noindent es decir, que influencias se tiene sobre un patrón de diseño y las alternativas que existen a este.\\
+\noindent Para alcanzar este objetivo, se demarco un catálogo de patrones de diseño, clasificados por la forma de encarar
+\noindent un problema dado y proveer una solución.\\
+\noindent Existen 23 patrones de diseño definidos, cada uno de ellos tiene una variación de acuerdo a la \textit{granularidad}
+\noindent y el nivel de abstracción.
+\noindent Estos están clasificados de acuerdo a dos criterios, el primero, es el propósito y el segundo pero
+\noindent pero no menos importante es el alcance(Gamma, Helm, Johnson, Vlissides, 1997).\\
+
+\begin{center}
+    \begin{table}
+        \begin{tabular}{|c|c|c|c|c|}
+            \cline{3-5}
+            \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} & \multicolumn{3}{c|}{\textbf{Propósito}}\\
+            \cline{3-5}
+            \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{\textit{Creational Pattern}} &
+                                    \multicolumn{1}{c|}{\textit{Structural Pattern}} &
+                                    \multicolumn{1}{c|}{\textit{Behavioral Pattern}}\\
+            \hline
+            \textbf{Alcance} & \textbf{Clase}  & Factory Method   & Adapter      & Interpreter, \newline Template Method \\ \cline{2-5}
+                             & \textbf{Objeto} & Abstract Factory & Adapter      & Chain Responsability\\
+                             &                 & Builder          & Bridge       & Command \\
+                             &                 & Prototype        & Composite    & Iterator\\
+                             &                 & Singleton        & Decorator    & Mediator\\
+                             &                 &                  & Flightweight & Observer\\
+                             &                 &                  & Facede       & Memento\\
+                             &                 &                  & Proxy        & State\\
+                             &                 &                  &              & Strategy\\
+                             &                 &                  &              & Visitor\\
+            \hline
+        \end{tabular}
+        \caption{Clasificación de los Patrones de Diseño}
+    \end{table}
+\end{center}
+\noindent
