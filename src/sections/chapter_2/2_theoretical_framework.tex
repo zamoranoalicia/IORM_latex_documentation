@@ -12,7 +12,7 @@
 \indent  La sección 2.1 de este capítulo explica brevemente que son los Idioms en ER y que
 \noident proveen estos a los diseñadores de bases de datos. La sección 2.2 otorga una explicación
 \noident rápida del Modelo Relacional y sus características relevantes. Por último la sección 2.3
-\noident da a conocer de forma concisa los principales atributos del Paradigma Orientado a Objetos (POO).
+\noident da a conocer de forma concisa los principales atributos del Paradigma Orientado a Objetos.
 \section {Idioms en ER}
 \noident Las primeras etapas de la construcción de un sistema de información, más propiamente
 \noident la etapa de análisis, usualmente requiere la definición de un modelo de persistencia.
@@ -116,32 +116,38 @@
                    que haga referencia a otra relación, este valor debe existir en dicha relación.
 \end{itemize}
 \section {Paradigma Orientado a Objetos}
-\noindent Conocida como el sucesor de la programación estructurada, la programación orientada a objetos(en adelante citada como POO)
+\noindent Conocida como la sucesora de la programación estructurada, la programación orientada a objetos(en adelante citada como POO)
 \noindent es un paradigma de programación que tiene como base fundamental el concepto de \textit{objeto}, que básicamente combina datos
 \noindent e instrucciones para la creación de este.\\
-\noindent Un objeto contiene en si mismo \textit{atributos} y \textit{comportamiento} también conocido como \textit{métodos},
-\noindent en la POO los datos y la lógica de programación están combinados, esta combinación puede ocurrir a diferentes niveles de
+\noindent Un objeto contiene en si mismo \textit{atributos} y \textit{comportamiento}(también conocidos como \textit{métodos}).
+\noindent En la POO los datos y la lógica de programación están combinados, esta combinación puede ocurrir a diferentes niveles de
 \noindent \textit{granularidad} permitiendo interacción con una basta cantidad de objetos[Kindler, 2011].\\
-\noindent La POO posee cuatro principios fundamentales \textit{Abstracción, Encapsulamiento, Herencia y Polimorfismo},
+\noindent La POO posee cuatro principios fundamentales: \textit{Abstracción, Encapsulamiento, Herencia y Polimorfismo},
 \noindent sobre los cuales se define un modelo orientado a objetos.[Perry, 2016]\\
 \begin{enumerate}
     \item \textit{Abstracción:} Es el proceso de  simplificación de las propiedades de un objeto,
-          \noindent desechando así, detalles irrelevantes para la implementación, seleccionando solo los aspectos
+          \noindent desechando así detalles irrelevantes para la implementación, seleccionando solo los aspectos
           \noindent más esenciales de un objeto.
     \item \textit{Encapsulamiento:} Limita la visibilidad y acceso a los atributos de un objeto dado, de esta forma
           \nonident es posible controlar el uso y la modificación de dichos campos.
-    \item \textit{Herencia:} Es la cualidad que tienen los objetos de heredar atributos, posibilitando así la especialización
-          \nonindent no aspectos no contemplados en objetos diseñados de forma más generalizada, así mismo evitando la duplicación
+    \item \textit{Herencia:} Es la cualidad que tienen los objetos de heredar atributos y métodos, posibilitando así la especialización
+          \nonindent de aspectos no contemplados en objetos diseñados de forma más generalizada, así mismo evitando la duplicación
           \nonindent de código en caso de existir múltiples especializaciones de un objeto.
-    \item \textit{Polimorfismo:} En esencia, polimorfismo denota, que los objetos que pertenecen a la misma rama jerárquica,
-           \nonindent pueden manifestar un comportamiento diferente para un mismo requerimiento.
+    \item \textit{Polimorfismo:} En esencia, polimorfismo denota que los objetos que pertenecen a la misma rama jerárquica,
+          \nonindent pueden manifestar un comportamiento diferente para un mismo requerimiento, esta propiedad esta estrechamente
+          \nonindent con la \textit{herencia}.
 \end{enumerate}
 \subsection {Patrones de Diseño}
 \noindent El diseño orientado a objetos, es considerado una tarea sustancial al momento de emprender un proyecto de software,
 \noindent más aún si se desea elaborar un diseño de alta calidad que incluya \textit{reusabilidad y flexibilidad}, para ello es necesario
 \noindent definir los objetos que serán representados en clases, de la misma manera es deseable alcanzar la \textit{granularidad}
-\noindent adecuada al momento de crear jerarquías de clase, interfaces, clases abstractas y establecer apropiadamente las relaciones
+\noindent adecuada al momento de crear jerarquías de clase e interfaces, y de esta forma establecer apropiadamente las relaciones
 \noindent que existen entre ellas.\\
+\noindent ``Cada patrón describe un problema, el cual ocurre de forma repetitiva en un ambiente determinado, y posteriormente
+\noindent la solución a ese problema, de tal forma que dicha solución puede ser utilizada un millón de veces, sin necesidad
+\noindent de analizar el problema una vez más", esta definición fue acuñada por \textit{Chrisopher Alexander} un arquitecto
+\noindent que describía los patrones de diseño de edificios, sin embargo esta definición es aplicable al modelo orientado a
+\noindent objetos, en la cual las soluciones son expresadas en términos de objetos e interfaces[Gamma, Helm, Johnson, Vlissides, 1997].\\
 \subsubsection {¿Como se describe un patrón de diseño?}
 \noindent La forma más acertada para describir un patrón de diseño es a través de \textit {notaciones gráficas},
 \noindent no obstante estás no proporcionan una solución integra para un problema dado, es imprescindible, además de
@@ -152,7 +158,7 @@
 \noindent Existen 23 patrones de diseño definidos, cada uno de ellos tiene una variación de acuerdo a la \textit{granularidad}
 \noindent y el nivel de abstracción.
 \noindent Estos están clasificados de acuerdo a dos criterios, el primero es el propósito, y el segundo
-\noindent pero no menos importante es el alcance(Gamma, Helm, Johnson, Vlissides, 1997).\\
+\noindent pero no menos importante es el alcance[Gamma, Helm, Johnson, Vlissides, 1997].\\
 \begin{center}
     \begin{table}[H]
         \begin{tabular}{|c|c|c|c|c|}
@@ -178,4 +184,7 @@
         \caption{Clasificación de los Patrones de Diseño[Gamma, Helm, Johnson, Vlissides, 1997]}
     \end{table}
 \end{center}
+\subsection{Breve Descripción del Sistema de Tipos del Lenguaje Java}
+\subsection{Mapeo Objeto Relacional(ORM)}
+\subsection{Discrepancia Objeto-Relacional(Object-relational Impedance Mismatch)}
 \noindent

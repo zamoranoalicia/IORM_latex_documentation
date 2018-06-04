@@ -4,4 +4,29 @@
 %%
 
 % Preamble
-\chapter{Capítulo 3}
+\chapter{Definición del Problema y Análisis}
+\noindent El capítulo previo, equipó con los conocimientos necesarios sobre dominio del problema.
+\noindent Este capítulo discute el problema en sí, exponiendo los aspectos más importantes y define un conjunto
+\noindent de requerimientos vitales para encarar el problema.\\
+\indent    La Sección 3.1 Provee la definición del problema.
+\noindent Posteriormente la Sección 3.2 analiza esta definición. La Sección 3.3 lista los requerimientos
+\noindent que son extractados de las secciones anteriores.
+\section{Definición del Problema}
+\noindent \textit{Escaso contenido semántico en las transformaciones de datos entre el sistema de tipos
+                    utilizado en un lenguaje de programación orientado a objetos provoca bajo rendimiento
+                    en el desarrollo de un sistema.}
+
+\section{Análisis del Problema}
+\noindent Esta sección describe los problemas que necesitan ser resueltos, para solucionar el problema principal.\\
+\indent De forma general, los subproblemas que surgen a consecuencia del problema definido en la sección anterior,
+\noindent se centran esencialmente en las diferencias que existen entre el \textit{Modelo Orientado a Objetos} y el
+\noindent \textit{Modelo Relacional}, dichas diferencias, dificultan la aplicación de características fundamentales
+\noindent de uno o ambos modelos, al momento de implementar modelos de datos.\\ Por ejemplo en un lenguaje orientado a objetos,
+\noindent un objeto tiene un \textit{identificador}, este es asignado al él al momento de su creación, el desarrollador no
+\noindent interviene en la creación y asignación de dicho valor, por otro lado la forma de identificar una tupla en el modelo
+\noindent relacional es mediante la definición y creación de una \textit{llave primaria}, para la cual, el desarrollador deberá
+\noindent especificar explícitamente el tipo y el dominio.\\ Para la solución de este problema existen patrones de diseño
+\noindent de datos que pueden ser aplicados a una solución genérica creando una capa de abstracción adicional, que maneje
+\noindent la creación de el \texit{identificador} de un objeto al momento de su instanciación, sin necesidad de requerir
+\noindent trabajo adicional por el desarrollador.
+\section{Requerimientos}
