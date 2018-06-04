@@ -1,5 +1,5 @@
 %%
-%% Author: alicia
+%% Author: Alicia Zamorano
 %% 13-05-18
 %%
 
@@ -25,14 +25,13 @@
 \noident de igual forma al ser construcciones semánticas estas no pueden ser definidas como soluciones completas,
 \noident por tanto, no deben considerarse como patrones de diseño.\\
 \noident Es importante denotar que los Idioms poseen atributos tales como:
-
 \begin{itemize}
     \item Ser un conjunto finito de transformaciones. Se tienen siete transformaciones definidas, las cuales serán revisadas en la siguiente sección.
     \item La semántica de un Idiom no altera la semántica original de sus componentes, es decir se preserva su correctitud.
     \item Toda construcción efectuada con Idioms contiene cualidades deseables como correctitud en la navegabilidad y normalización.
 \end{itemize} \\
 \noident De esta manera estas construcciones añaden propiedades deseables, las cuales las convierten en un recurso eficiente al
-\noident momento de abstraer un modelo de datos (Flores, 2006).
+\noident momento de abstraer un modelo de datos[Flores, 2006].
 \subsection{Clasificación de los Idioms}
 \begin{enumerate}
     \item \textit {Clasificación o Catálogo:} La entidad-tipo B clasifica los posibles valores
@@ -56,12 +55,46 @@
 \noindent El modelo relacional es el resultado del trabajo gestado por Edgar Codd en la década de 1960,
 \noindent el cual cimentó su investigación en la \textit {teoría matemática de conjuntos y la lógica de predicados}, enfocado en una construcción
 \noindent conocida como relación, logró desarrollar el Modelo Relacional que posteriormente fué introducido en un artículo
-\noindent de investigación de IBM el año 1970 (Harrington, 2009).\\
-\noindent Este modelo describe los datos en términos de \textit{relaciones, atributos y tuplas}
-%\noindent estos son referidos en el modelo conceptual como \textit{entidades de clase, atributos y cantidad de ocurrencias};
-\noindent en el modelo relacional estos son implementados como tablas, columnas y filas respectivamente(Hay, 2006).\\
-\noindent De la misma manera sostiene que existen tres componentes importantísimos en el modelo \textit {estructura, integridad y manipulación}.
-\subsection {Estructura}
+\noindent de investigación de IBM el año 1970[Harrington, 2009].\\
+\noindent Este modelo describe los datos en términos de \textit{relaciones, atributos o tipos y tuplas}
+\noindent en el modelo relacional estos son implementados en un contexto de SQL(\textit{Structured Query Language})
+\noindent como tablas, columnas y filas respectivamente[Hay, 2006].\\
+\begin{center}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|c|c|c|}
+            \hline
+            Relacional      &             & Contexto SQL\\
+            \hline
+            Relación        & \rightarrow & Tabla\\
+            Atributo o Tipo & \rightarrow & Columna\\
+            Tupla           & \rightarrow & Fila\\
+            \hline
+        \end{tabular}
+        \caption{Representación de las características del Modelo Relacional en el Contexto SQL(Elaboración propia)}
+    \end{table}
+\end{center}
+\noindent A continuación se remarca características especificas del contexto SQL que són tomadas en cuenta en el modelo
+\noindent relacional.\\
+\subsubsection{Columnas}
+\begin{itemize}
+    \item \textit{Unicidad:} Cada columna debe poseer un nombre único.
+    \item \textit{Dominio:} Cada columna esta obligada a pertenecer a un dominio específico, de esta forma se asegura la permisibilidad
+          de datos para ese atributo.
+    \item \textit {Inexistencia de orden:} No existe el concepto de orden en la definición de columnas, dado que su representación
+          esta basada en un \textit{conjunto}, este por definición matemática no toma en cuenta el orden de los elementos.
+\end{itemize}
+\subsubsection{Filas}
+\begin{itemize}
+    \item \textit{Valores univaluados}
+    \item \textit{Unicidad:} No pueden existir filas duplicadas en una relación
+    \item \textit{No existe el concepto de posición}
+    \item \textit{Introduce el concepto de Llaves:} Tanto llaves primarias, como llaves foráneas pueden ser
+                  parte de una fila, estas podrían formarse como resultado de la combinación de varias columnas,
+                  y son indispensables para identificar de forma exclusiva a cada fila.
+\end{itemize}
+\noindent De la misma manera el modelo relacional sostiene que existen tres componentes importantísimos en el modelo \textit {estructura e integridad}.
+\subsection{Estructura}
 \noindent El elemento estructural fundamental es, por supuesto, la relación, una relación esta definida sobre un tipo
 \noindent (referido asimismo como dominio), el cual es básicamente una abstracción de cualidades similares denominadas atributos,
 \noindent los cuales poseen propiedades definidas como:
@@ -75,11 +108,34 @@
 \noindent Dos restricciones de integridad \textit(integrity constrainsts) se hallan originalmente definidas en el modelo relacional
 \noindent formulado por Codd, dichas restricciones incluyen:
 \begin{itemize}
-    \item \textit {Integridad en las Relaciones:}
-    \item \textit {Integridad Referencial:}
+    \item \textit {Integridad en las Relaciones:} El primer trabajo realizado por Codd precisaba que los valores en las
+                   relaciones no podían ser \textit{nulos}. Posteriormente se introdujo el concepto de \textit{nulo} en los
+                   modelos de datos, sin embargo se mantuvo la restricción en la cual un tipo definido como
+                   identificador no puede contener un valor nulo.
+    \item \textit {Integridad Referencial:} Es otro de los conceptos importantes que introdujo Codd, dado un valor  de un tipo
+                   que haga referencia a otra relación, este valor debe existir en dicha relación.
 \end{itemize}
-\subsection {Manipulación}
 \section {Paradigma Orientado a Objetos}
+\noindent Conocida como el sucesor de la programación estructurada, la programación orientada a objetos(en adelante citada como POO)
+\noindent es un paradigma de programación que tiene como base fundamental el concepto de \textit{objeto}, que básicamente combina datos
+\noindent e instrucciones para la creación de este.\\
+\noindent Un objeto contiene en si mismo \textit{atributos} y \textit{comportamiento} también conocido como \textit{métodos},
+\noindent en la POO los datos y la lógica de programación están combinados, esta combinación puede ocurrir a diferentes niveles de
+\noindent \textit{granularidad} permitiendo interacción con una basta cantidad de objetos[Kindler, 2011].\\
+\noindent La POO posee cuatro principios fundamentales \textit{Abstracción, Encapsulamiento, Herencia y Polimorfismo},
+\noindent sobre los cuales se define un modelo orientado a objetos.[Perry, 2016]\\
+\begin{enumerate}
+    \item \textit{Abstracción:} Es el proceso de  simplificación de las propiedades de un objeto,
+          \noindent desechando así, detalles irrelevantes para la implementación, seleccionando solo los aspectos
+          \noindent más esenciales de un objeto.
+    \item \textit{Encapsulamiento:} Limita la visibilidad y acceso a los atributos de un objeto dado, de esta forma
+          \nonident es posible controlar el uso y la modificación de dichos campos.
+    \item \textit{Herencia:} Es la cualidad que tienen los objetos de heredar atributos, posibilitando así la especialización
+          \nonindent no aspectos no contemplados en objetos diseñados de forma más generalizada, así mismo evitando la duplicación
+          \nonindent de código en caso de existir múltiples especializaciones de un objeto.
+    \item \textit{Polimorfismo:} En esencia, polimorfismo denota, que los objetos que pertenecen a la misma rama jerárquica,
+           \nonindent pueden manifestar un comportamiento diferente para un mismo requerimiento.
+\end{enumerate}
 \subsection {Patrones de Diseño}
 \noindent El diseño orientado a objetos, es considerado una tarea sustancial al momento de emprender un proyecto de software,
 \noindent más aún si se desea elaborar un diseño de alta calidad que incluya \textit{reusabilidad y flexibilidad}, para ello es necesario
@@ -89,26 +145,25 @@
 \subsubsection {¿Como se describe un patrón de diseño?}
 \noindent La forma más acertada para describir un patrón de diseño es a través de \textit {notaciones gráficas},
 \noindent no obstante estás no proporcionan una solución integra para un problema dado, es imprescindible, además de
-\noindent el registro de las clases y sus relaciones, el registro de los parámetros sobre los cuales se tomo la decisión
+\noindent el registro de las clases y sus relaciones, el registro de los parámetros sobre los cuales se tomo la decisión,
 \noindent es decir, que influencias se tiene sobre un patrón de diseño y las alternativas que existen a este.\\
 \noindent Para alcanzar este objetivo, se demarco un catálogo de patrones de diseño, clasificados por la forma de encarar
 \noindent un problema dado y proveer una solución.\\
 \noindent Existen 23 patrones de diseño definidos, cada uno de ellos tiene una variación de acuerdo a la \textit{granularidad}
 \noindent y el nivel de abstracción.
-\noindent Estos están clasificados de acuerdo a dos criterios, el primero, es el propósito y el segundo pero
+\noindent Estos están clasificados de acuerdo a dos criterios, el primero es el propósito, y el segundo
 \noindent pero no menos importante es el alcance(Gamma, Helm, Johnson, Vlissides, 1997).\\
-
 \begin{center}
-    \begin{table}
+    \begin{table}[H]
         \begin{tabular}{|c|c|c|c|c|}
             \cline{3-5}
             \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} & \multicolumn{3}{c|}{\textbf{Propósito}}\\
             \cline{3-5}
             \multicolumn{1}{c}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{\textit{Creational Pattern}} &
-                                    \multicolumn{1}{c|}{\textit{Structural Pattern}} &
-                                    \multicolumn{1}{c|}{\textit{Behavioral Pattern}}\\
+                                   \multicolumn{1}{c|}{\textit{Structural Pattern}} &
+                                   \multicolumn{1}{c|}{\textit{Behavioral Pattern}}\\
             \hline
-            \textbf{Alcance} & \textbf{Clase}  & Factory Method   & Adapter      & Interpreter, \newline Template Method \\ \cline{2-5}
+            \textbf{Alcance} & \textbf{Clase}  & Factory Method   & Adapter      & Interpreter, \newline Template Method\\ \cline{2-5}
                              & \textbf{Objeto} & Abstract Factory & Adapter      & Chain Responsability\\
                              &                 & Builder          & Bridge       & Command \\
                              &                 & Prototype        & Composite    & Iterator\\
@@ -120,7 +175,7 @@
                              &                 &                  &              & Visitor\\
             \hline
         \end{tabular}
-        \caption{Clasificación de los Patrones de Diseño}
+        \caption{Clasificación de los Patrones de Diseño[Gamma, Helm, Johnson, Vlissides, 1997]}
     \end{table}
 \end{center}
 \noindent
