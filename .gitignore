@@ -12,3 +12,8 @@
 *.toc
 #Exclude idea folder
 .idea
+out/main\.out
+
+src/main\.out
+
+out/main\.synctex\.gz
